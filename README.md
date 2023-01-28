@@ -1,12 +1,13 @@
 # no name blocker
 **ITS NODEJS NOT HTML** 
 
-unoptimized and shit unblocker which uses node-unblocker (barely works/laggy)
-gets the job done but unrecommended if you are actively trying to hide your history/unblock your shit
-dont recommend this but you do you
+unoptimized and shit unblocker which uses <a href="https://github.com/nfriedly/node-unblocker">node-unblocker</a> (barely works/laggy on school networks?)
+gets the job done but unrecommended if you are actively trying to hide your history/unblock your shit.
 
-updates unlikely
-please dont contact me over this
+I dont recommend this but you do you.
+
+updates unlikely,
+please dont contact me over this,
 this was a project for fun and i dont plan on fucking on this again unless i wanna test out shit
 
 if you plan on using this, deploy it on a VPS because this is horribly coded and needs A LOT of performance power (last i checked btw)
@@ -30,7 +31,7 @@ if you plan on using this, deploy it on a VPS because this is horribly coded and
 - Google.com
 - Reddit.com
 - Bing.com
-- And more.
+- More unlisted ones (idk why you would need that???????????????????/)
 
 # credits
 <a href="https://github.com/pukmajster/bunker">creator of the website (front end)</a>
