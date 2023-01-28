@@ -1,4 +1,4 @@
-# no name blocker
+# no namer unblocker
 **ITS NODEJS NOT HTML** 
 
 unoptimized and shit unblocker which uses <a href="https://github.com/nfriedly/node-unblocker">node-unblocker</a> (barely works/laggy on school networks?)
