@@ -45,11 +45,9 @@ im a little retarded so yea uh **if you get in trouble not my fault** 🤷
 - More unlisted ones (idk why you would need that???????????????????/)
 
 # credits
-<div alight = "center">
+<div align="center">
 <a href="https://github.com/pukmajster/bunker">creator of the website (front end)</a>
-
 <a href="https://github.com/nfriedly/node-unblocker">node unblocker</a>
-
 <a href="https://github.com/titaniumnetwork-dev/Ultraviolet/">ultra violet</a>
 <a href="https://github.com/Metallic-Web/Metallic/blob/main/README.md">thing i swiped the deploy bullshit from</a>
 </div>
