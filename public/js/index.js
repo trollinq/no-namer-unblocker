@@ -154,9 +154,9 @@ function isValidHttpUrl(string) {
 function searchForPhrase(phrase, replace = false) {
         if (isValidHttpUrl(phrase)){
         if (phrase.search(/^http[s]?:\/\//)){
-            phrase = `${document.location.origin}/nu/https://${phrase}`;        
+            phrase = `https://${phrase}`;        
         }
-        window.open(phrase, '_blank');
+        window.open(`${document.location.origin}/nu/${phrase}`, '_blank');
         return;
     }
     // if(replace) document.getElementById('Search_Input').value = phrase;
