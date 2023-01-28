@@ -1,17 +1,38 @@
-import Server from 'bare-server-node';
+import createBareServer from './bare-server-node/createServer.ts';
 import express from 'express';
-import nodeStatic from 'node-static';
+import http from 'node:http';
+import config from './config.json'
 
-const app = express()
+const httpServer = http.createServer();
 
-const bare =  new Server('/bare/', '');
-const serve = new nodeStatic.Server('html/');
+const app = express();
 
-app.get("/", (request, response) => {
-    if (bare.route_request(request, response)) return true;
-    serve.serve(request, response);
-})
+app.get('/', (req, res) => {
+	res.send('Hello, World!');
+});
 
-app.listen(process.env.PORT || 8443, ()=>{
-    console.log(`Started on port ${process.env.PORT || 8443}`)
-})
+const bareServer = createBareServer('/html/');
+
+httpServer.on('request', (req, res) => {
+	if (bareServer.shouldRoute(req)) {
+		bareServer.routeRequest(req, res);
+	} else {
+		app(req, res);
+	}
+});
+
+httpServer.on('upgrade', (req, socket, head) => {
+	if (bareServer.shouldRoute(req)) {
+		bareServer.routeUpgrade(req, socket, head);
+	} else {
+		socket.end();
+	}
+});
+
+httpServer.on('listening', () => {
+	console.log('HTTP server listening');
+});
+
+httpServer.listen({
+	port: config.port,
+});

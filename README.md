@@ -1,4 +1,6 @@
 # no name blocker
+**ITS NODEJS** 
+
 updates unlikely
 please dont contact me over this
 this was a project for fun and i dont plan on fucking on this again unless i wanna test out shit

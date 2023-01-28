@@ -146,7 +146,7 @@ function SearchBox() {
     return html `
         <div id="SearchBox" >
 
-            <img id="SearchBoxIcon" width="24" src="./media/icons8-google-50.png" alt="Google" />
+            <img id="SearchBoxIcon" width="24" src="./media/duckduckgo.png" alt="Google" />
 
             <div class="blur glass" >
                     <input id="Search_Input" class="glass---hover" type="text"  />
