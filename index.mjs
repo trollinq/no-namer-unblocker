@@ -13,21 +13,10 @@ app.use(unblockerModule({
     prefix: '/nu/'
 }))
 
-app.on("request",(req,res)=>{
-    if (bare.route_request(req, res)) return true;
-})
-
-app.on("upgrade",(req,socket,head)=>{
-    if(bare.route_upgrade(req, socket, head))return;
-	socket.end();
-})
-
 app.listen((config.port||8080),(()=>{
     console.log(`[*] Started on port ${(config.port||8080)}`)
 }));
 
-/*
 process.on('uncaughtException', function (err) {
     console.log(`[!] error occured during script! error: ${err}`);
 }); 
-*/
