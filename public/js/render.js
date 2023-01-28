@@ -22,7 +22,6 @@ function Root() {
 
         ${BackgroundImageUrl()}
         <section id="main"  class="animate__animated animate__fadeIn">
-            
             <div id="Top" >
                 ${Clock()}
                 ${SearchBox()}
@@ -33,6 +32,33 @@ function Root() {
                     label: category.category,
                     children: category.bookmarks.map(bookmark => Bookmark(bookmark)).join('')
                 })).join('')}
+
+                <div class="BookmarkCategory glass fatWidth" >
+                    <div class="BookmarkCategory_Label">Proxy Type</div>
+                    <a href="javascript:localStorage.setItem('proxyEngine','uv')">
+                    <div class="Bookmark " >
+                    <div class="BookmarkIcon" >
+                    <img height="16" width="16" src='https://raw.githubusercontent.com/titaniumnetwork-dev/Ultraviolet-Static/main/public/uv.png' />
+                </div>
+                        <div class="BookmarkInfo" >
+                            <div class="BookmarkInfo_Label">ultra violet</div>
+                            <div class="BookmarkInfo_Url">secure but slow</div>
+                        </div>
+                    </div>
+                </a>
+                    <a href="javascript:localStorage.setItem('proxyEngine','nu')">
+                    <div class="Bookmark " >
+                    <div class="BookmarkIcon" >
+                    <img height="16" width="16" src='https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png' />
+                </div>
+                        <div class="BookmarkInfo" >
+                            <div class="BookmarkInfo_Label">node unblocker</div>
+                            <div class="BookmarkInfo_Url">default proxy</div>
+                        </div>
+                    </div>
+                </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -298,15 +324,6 @@ function EditorDialog({ id }) {
 function Snow() {
     return html `<div class="snow"></div>`.repeat(config.background?.snow?.enabled?(config.background?.snow?.count ?? 200) : 0)
 }
-
-
-
-
-
-
-
-
-
 
 function Render(html) {
     let root = document.querySelector('bunker');

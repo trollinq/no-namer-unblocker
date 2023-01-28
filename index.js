@@ -1,25 +1,3 @@
-var config = require("./config.json")
-
-var express = require("express")
-var fs = require("fs")
-var serveStatic = require( "serve-static" );
-
-var app = express()
-
-
-try{
-    var unblockerModule = require('unblocker');
-    var unblocker = new unblockerModule({
-        prefix: '/nu/'
-    });
-    app.use(unblocker);
-}catch(err){
-    console.log(`[!] error occured while setting up "node-unblocker"; error: ${err}`)
-}
-
-app.use('/', serveStatic('./public'));
-app.listen(config.port||8000, ()=>{console.log(`[*] Started on port ${config.port||8000}`)})
-
-process.on('uncaughtException', function (err) {
-    console.log(err);
-}); 
+(async() => {
+    await import('./index.mjs');
+})();  

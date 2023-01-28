@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Drive - Google Drive</title>
     <link rel="icon" href="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png">
+    
     <script src="js/index.js" defer ></script>
     <script src="js/render.js" defer ></script>
+
+    <script src="/uv/uv.bundle.js"></script>
+    <script src="/uv/uv.config.js"></script>
+
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
+
 <body>
-    <bunker></bunker>
-</body>
+    <bunker id="ok"></bunker>
+    <div class="navbar" id="topbarr" hidden>
+        <a href="javascript:back()">back</a>
+    </div>
+    <iframe hidden="true" id="iframelol" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:95%;width:100%;position:absolute;top:0%;left:0px;right:0px;bottom:0px" height="95%" width="100%"></iframe>
 </html>

@@ -147,20 +147,59 @@ function startTime() {
 
 const searchElem = document.getElementById('Search_Input');
 
+function back(){
+    let p = document.getElementById('iframelol');
+    let k = document.getElementById('ok');
+    let o = document.getElementById('topbarr')
+    o.setAttribute("hidden",true)
+    k.removeAttribute("hidden")
+    p.setAttribute("hidden",true);
+    p.removeAttribute("src")
+}
+
 function isValidHttpUrl(string) {
   return string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g)
 }
 
+function open(url){
+    /*
+let p = document.getElementById('iframelol');
+    let k = document.getElementById('ok');
+    let o = document.getElementById('topbarr')
+    o.removeAttribute("hidden")
+    k.setAttribute("hidden",true)
+    p.removeAttribute("hidden");
+    p.setAttribute("src", url)
+    */
+    window.location.href = url
+}
+
+function search(phrase){
+    var proxyType = localStorage.getItem('proxyEngine') || "nu"
+    localStorage.setItem("lastUrl",phrase)
+
+    if (proxyType=="nu"){
+        open(`${document.location.origin}/nu/${phrase}`, '_blank');
+    } else {
+        window.navigator.serviceWorker.register('../sw.js', {
+            scope: __uv$config.prefix
+        }).then(() => {
+            open(__uv$config.prefix + __uv$config.encodeUrl(phrase));
+        });
+    }
+}
+
 function searchForPhrase(phrase, replace = false) {
-        if (isValidHttpUrl(phrase)){
+    if (isValidHttpUrl(phrase)){
         if (phrase.search(/^http[s]?:\/\//)){
             phrase = `https://${phrase}`;        
         }
-        window.open(`${document.location.origin}/nu/${phrase}`, '_blank');
-        return;
+        //window.open(`${document.location.origin}/nu/${phrase}`, '_blank');
+        return search(phrase);
     }
     // if(replace) document.getElementById('Search_Input').value = phrase;
-    window.open(`${document.location.origin}/nu/https://duckduckgo.com/?q=${phrase}`, '_blank');
+    //window.open(`${document.location.origin}/nu/https://duckduckgo.com/?q=${phrase}`, '_blank');
+    search(`https://duckduckgo.com/?q=${phrase}`)
 }
 
 
