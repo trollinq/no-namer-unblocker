@@ -8,7 +8,7 @@ I dont recommend this but you do you.
 
 updates unlikely,
 please dont contact me over this,
-this was a project for fun and i dont plan on fucking on this again unless i wanna test out shit
+this was a project for fun and i dont plan on fucking around on this again unless i wanna test out shit
 
 if you plan on using this, deploy it on a VPS because this is horribly coded and needs A LOT of performance power (last i checked btw)
 *Replit doesnt support proxys/unblockers so avoid that lol*
