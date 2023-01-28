@@ -8,7 +8,7 @@ gets the job done but unrecommended if you are actively trying to hide your hist
 
 I dont recommend this but you do you.
 please dont contact me over this,
-this was a project for fun and i dont plan on fucking on this again unless i wanna test out shit
+this was a project for fun and i dont plan on fucking around on this again unless i wanna test out shit
 
 if you plan on using this, deploy it on a VPS because this is horribly coded and needs A LOT of performance power (last i checked btw)
 </div>
@@ -65,4 +65,7 @@ cd no-namer-unblocker
 npm install
 npm start
 ```
+<<<<<<< HEAD
 </div>
+=======
+>>>>>>> 66c5d919aee76550b696444a5da9e5e5a40e217f
