@@ -154,13 +154,13 @@ function isValidHttpUrl(string) {
 function searchForPhrase(phrase, replace = false) {
         if (isValidHttpUrl(phrase)){
         if (phrase.search(/^http[s]?:\/\//)){
-            phrase = `https://${phrase}`;        
+            phrase = `${document.location.origin}/nu/https://${phrase}`;        
         }
         window.open(phrase, '_blank');
         return;
     }
     // if(replace) document.getElementById('Search_Input').value = phrase;
-    window.open(`https://duckduckgo.com/?q=${phrase}`, '_blank');
+    window.open(`${document.location.origin}/nu/https://duckduckgo.com/?q=${phrase}`, '_blank');
 }
 
 

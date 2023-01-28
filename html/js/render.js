@@ -62,7 +62,7 @@ function Bookmark({ label, url, baseUrl, logoUrl }) {
     let rel = config.bookmarkOptions.alwaysOpenInNewTab?'noopener' : '';
 
     return html `
-        <a target="${rel}" href="${url ?? baseUrl}" rel="${rel}" >
+        <a target="${rel}" href="${document.location.origin}/nu/${url ?? baseUrl}" rel="${rel}" >
             <div class="Bookmark " >
                 <div class="BookmarkIcon" >
                     <img height="16" width="16" src='${logoSrc}' />
