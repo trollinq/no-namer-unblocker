@@ -2,6 +2,8 @@
 **ITS NODEJS NOT HTML** 
 **WHEN STARTING UP TRY TO USE INDEX.MJS AND NOT INDEX.JS! INDEX.JS IS ONLY THERE IF YOU ARE FORCED TO RUN INDEX.JS!**
 
+this fucking read me md is so retarded
+
 unoptimized and shit proxy which uses <a href="https://github.com/nfriedly/node-unblocker">node-unblocker</a> (barely works/laggy on school networks?/slow?) and ultra violet (secure?/very laggy/slow)
 gets the job done but unrecommended if you are actively trying to hide your history/unblock your shit.
 
@@ -46,7 +48,7 @@ im a little retarded so yea uh **if you get in trouble not my fault** 🤷
 
 # credits
 <div align="center">
-- <a href="https://github.com/pukmajster/bunker">creator of the website (front end)</a>
+<a href="https://github.com/pukmajster/bunker">creator of the website (front end)</a>
 - <a href="https://github.com/nfriedly/node-unblocker">node unblocker</a>
 - <a href="https://github.com/titaniumnetwork-dev/Ultraviolet/">ultra violet</a>
 - <a href="https://github.com/Metallic-Web/Metallic/blob/main/README.md">thing i swiped the deploy bullshit from</a>
